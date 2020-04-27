@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+  <ion-grid style="height: 100%">
+    <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%; flex-direction: column">
+      <ion-col>
+        <img src="../assets/mara-logo.png">
+        <form class="form">
+          <ion-item lines="none">
+            <ion-label position="stacked">Emel</ion-label>
+            <ion-input type="text" placeholder="Emel"></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label position="stacked">Kata Laluan</ion-label>
+            <ion-input type="password" placeholder="Kata laluan"></ion-input>
+          </ion-item>
+          <div class="ion-text-center">
+            <ion-button
+              shape="round" 
+              color="primary"
+              [routerLink]="['/core/home']">
+              Log masuk
+            </ion-button>
+          </div>
+          <div class="ion-text-center">
+            <ion-button
+              shape="round" 
+              color="light"
+              [routerLink]="['/guest/pengambilan']">
+              Log sebagai tetamu
+            </ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

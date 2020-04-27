@@ -1,0 +1,68 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pengambilan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <ion-button *ngIf="segment == 'pengambilan'" color="primary" size="small">Pengambilan</ion-button>
+    <ion-button *ngIf="segment == 'institusi'" color="light" (click)="changeSegment()"  size="small">Pengambilan</ion-button>
+    <ion-button *ngIf="segment == 'institusi'" color="primary"  size="small">Institusi</ion-button>
+    <ion-button *ngIf="segment == 'pengambilan'" color="light" (click)="changeSegment()"  size="small">Institusi</ion-button>
+  </div>
+
+  <div *ngIf="segment == 'pengambilan'">
+    <ion-item>
+      <ion-img src="assets/syarat-1.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/syarat-2.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/syarat-3.jpg"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/syarat-4.jpg"></ion-img>
+    </ion-item>
+  </div>
+
+  <div *ngIf="segment =='institusi'">
+    <ion-item>
+      <ion-img src="assets/giatmara.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/gmi.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/ikm.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/unikl.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/kktm.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/km.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/kpm.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/kptm.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/kuptm.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-img src="assets/mjii.png"></ion-img>
+    </ion-item>
+  </div>
+  <div class="ion-text-center">
+    <ion-button color="primary" [routerLink]="['/guest/mohon']">Mohon</ion-button>
+  </div>
+</ion-content>

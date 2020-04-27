@@ -1,0 +1,90 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Keputusan Peperiksaan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Keputusan Keseluruhan
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>
+        <h4 class="ion-no-margin">Semester 1</h4>
+        <p class="ion-no-margin">GPA: 3.08</p>
+        <p class="ion-no-margin">CGPA: 3.08</p>
+      </ion-label>
+      <ion-button slot="end" color="primary" (click)="view">Keputusan</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h4 class="ion-no-margin">Semester 2</h4>
+        <p class="ion-no-margin">GPA: 3.16</p>
+        <p class="ion-no-margin">CGPA: 3.12</p>
+      </ion-label>
+      <ion-button slot="end" color="primary" (click)="view()">Keputusan</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="isShow === true">
+    <ion-list-header>
+      Keputusan Semester
+    </ion-list-header>
+    <ion-item>
+      <table>
+        <thead>
+          <tr class="ion-text-center">
+            <th>Kod</th>
+            <th>Subjek</th>
+            <th>Kredit</th>
+            <th>Mata Gred</th>
+            <th>Gred</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ion-text-center">
+            <td>ENT212</td>
+            <td>Entrepreneurship</td>
+            <td>3</td>
+            <td>4.00</td>
+            <td>A+</td>
+          </tr>
+          <tr class="ion-text-center">
+            <td>MAT101</td>
+            <td>Fundemental Calculus</td>
+            <td>3</td>
+            <td>4.00</td>
+            <td>A+</td>
+          </tr>
+          <tr class="ion-text-center">
+            <td>PHY111</td>
+            <td>Introduction to Physics</td>
+            <td>3</td>
+            <td>3.10</td>
+            <td>A</td>
+          </tr>
+          <tr class="ion-text-center">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>GPA</td>
+            <td>3.08</td>
+          </tr>
+          <tr class="ion-text-center">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>CGPA</td>
+            <td>3.08</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-item>
+  </ion-list>
+</ion-content>

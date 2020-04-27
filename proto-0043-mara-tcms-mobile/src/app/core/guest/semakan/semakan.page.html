@@ -1,0 +1,25 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Semakan Permohonan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <h5>Semakan Permohonan Pengambilan Kemasukan ke IMPMa Sesi Jun 2020</h5>
+  </div>
+  <ion-item lines="none">
+    <ion-input placeholder=" Masukkan No. MyKad" class="ion-text-center"></ion-input>
+  </ion-item>
+  <div class="ion-text-center">
+    <ion-button (click)="check()" color="primary" style="margin-left: auto; margin-right: auto; margin-top: 1rem">Semak</ion-button>
+  </div>
+
+  <div *ngIf="isChecked" class="ion-text-center">
+    <h3 class="ion-no-margin">TAHNIAH!</h3>
+    <h4 class="ion-no-margin">Permohonan Anda Berjaya</h4>
+  </div>
+</ion-content>
